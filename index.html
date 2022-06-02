@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+    <title>Multi Step Form</title>
+  </head>
+  <body>
+    <form autocomplete="off">
+      <!-- active form -->
+      <ul id="progressbar">
+        <li id="active1">Personal Details</li>
+        <li id="active2">Educational Details</li>
+        <li id="active3">Document Upload</li>
+      </ul>
+      <!-- form 1 -->
+      <section>
+        <article class="form-1" id="form-1">
+          <fieldset>
+            <label for="firstname">First Name</label>
+            <input
+              value=""
+              type="text"
+              name="firstname"
+              placeholder="first name"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="lastname">Last Name</label>
+            <input
+              value=""
+              type="text"
+              name="lastname"
+              placeholder="last name"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="dateofbirth">Date Of Birth</label>
+            <input
+              value=""
+              type="date"
+              name="dateofbirth"
+              placeholder="date of birth"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="email">Email</label>
+            <input
+              value=""
+              type="text"
+              name="email"
+              placeholder="email"
+              id="email"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="fathersname">Fathers Name</label>
+            <input
+              value=""
+              type="text"
+              name="fathersname"
+              placeholder="fathers name"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="mothersname">Mothers Name</label>
+            <input
+              value=""
+              type="text"
+              name="mothersname"
+              placeholder="mothers name"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset class="gender">
+            <p>Gender</p>
+            <div>
+              <input
+                value=""
+                type="radio"
+                name="gender"
+                id="gender"
+                value="male"
+              />
+              <label for="gender">Male</label>
+              <input
+                value=""
+                type="radio"
+                name="gender"
+                id="gender"
+                value="female"
+              />
+              <label for="gender">Female</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <label for="nationality">Nationality </label>
+            <input
+              value=""
+              type="text"
+              name="nationality"
+              id="nationality"
+              placeholder="Indian,Indonasian,...."
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="home">Home Address</label>
+            <input
+              value=""
+              type="text"
+              name="homeaddress"
+              id="homeaddress"
+              placeholder="House No. "
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="city">City</label>
+            <input
+              value=""
+              type="text"
+              name="city"
+              id="city"
+              placeholder="city"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="country">Country</label>
+            <input
+              value=""
+              type="text"
+              name="country"
+              id="country"
+              placeholder="country"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="telephone-no-home">Telephone No.(Home)</label>
+            <input
+              value=""
+              type="text"
+              name="telephone-no-home"
+              id="telephone-no-home"
+              placeholder="1234567890"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="telephone-no-mobile">Telephone No.(Mobile)</label>
+            <input
+              value=""
+              type="text"
+              name="telephone-no-mobile"
+              id="telephone-no-mobile"
+              placeholder="1234567890"
+            />
+
+            <small></small>
+          </fieldset>
+          <div class="btn-container">
+            <input
+              type="button"
+              class="btn-next"
+              value="Next"
+              onclick="next_step1()"
+            />
+          </div>
+        </article>
+      </section>
+      <!-- form 2 -->
+      <section>
+        <article class="form-2" id="form-2">
+          <fieldset>
+            <label for="institution_name">HSC Institution Name</label>
+            <input
+              value=""
+              type="text"
+              name="hsc institution name"
+              id="institution_name"
+              placeholder="hsc institution name"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="board">Select HSC Board </label>
+            <select name="board" id="board">
+              <option value="CBSE">CBSE</option>
+              <option value="ICSE">ICSE</option>
+              <option value="STATE BOARD">STATE BOARD</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <label for="hsc_marks">HSC Marks</label>
+            <input
+              value=""
+              type="text"
+              name="hsc_marks"
+              id="hsc_marks"
+              placeholder="marks in percentage"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="institution_name">Institution Name</label>
+            <input
+              value=""
+              type="text"
+              name="ssc institution name"
+              id="institution_name"
+              placeholder="ssc institution name"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="board">Select SSC Board</label>
+            <select name="board" id="board">
+              <option value="CBSE">CBSE</option>
+              <option value="ICSE">ICSE</option>
+              <option value="STATE BOARD">STATE BOARD</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <label for="ssc_marks">SSC Marks</label>
+            <input
+              value=""
+              type="text"
+              name="ssc_marks"
+              id="ssc_marks"
+              placeholder="marks in percentage"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="currently_pursuing">Currently Pursuing</label>
+            <input
+              value=""
+              type="text"
+              name="currently_pursuing"
+              id="currently_pursuing"
+              placeholder="Currently Pursuing"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="current_educational_institution_name"
+              >Current_educational_institution_name</label
+            >
+            <input
+              value=""
+              type="text"
+              name="current_educational_institution_name"
+              id="current_educational_institution_name"
+              placeholder="current_educational_institution_name"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="overall_percentage">Overall Percentage</label>
+            <input
+              value=""
+              type="text"
+              name="overall_percentage"
+              id="overall_percentage"
+              placeholder="overall_percentage"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="backlogs_if_any">Backlogs if any</label>
+            <input
+              value=""
+              type="text"
+              name="backlogs_if_any"
+              id="backlogs_if_any"
+              placeholder="backlogs if any. type 0 if  none"
+            />
+
+            <small></small>
+          </fieldset>
+          <div class="btn-container">
+            <input
+              id="pre_btn1"
+              onclick="prev_step1()"
+              type="button"
+              value="Previous"
+            />
+            <input
+              id="next_btn2"
+              name="next"
+              onclick="next_step2()"
+              type="button"
+              value="Next"
+            />
+          </div>
+        </article>
+      </section>
+      <!-- form 3 -->
+      <section>
+        <article class="form-3" id="form-3">
+          <fieldset>
+            <label for="recentphotograph">Recent Photograph</label>
+            <input
+              value=""
+              type="file"
+              name="recentphotograph"
+              placeholder="recent photgraph"
+              accept="image/jpeg,image/jpg,image/png,application/pdf"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="hscmarksheet">HSC Marksheet</label>
+            <input
+              value=""
+              type="file"
+              name="hscmarksheet"
+              placeholder="HSC marksheet"
+              accept="image/jpeg,image/jpg,image/png,application/pdf"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="sscmarksheet">SSC Marksheet</label>
+            <input
+              value=""
+              type="file"
+              name="sscmarksheet"
+              placeholder="SSC marksheet"
+              accept="image/jpeg,image/jpg,image/png,application/pdf"
+            />
+
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="allsemestermarks">All Semester Marks</label>
+            <input
+              value=""
+              type="file"
+              name="allsemestermarks"
+              placeholder="all semester marks in one sheet or in one pdf"
+              accept="image/jpeg,image/jpg,image/png,application/pdf"
+            />
+
+            <small></small>
+          </fieldset>
+          <div class="btn-container">
+            <input
+              id="pre_btn2"
+              onclick="prev_step2()"
+              type="button"
+              value="Previous"
+            />
+            <input
+              class="submit_btn"
+              type="submit"
+              value="Submit"
+              name="submit"
+              onclick="ndata(event)"
+            />
+          </div>
+        </article>
+      </section>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#progressbar {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  color: grey;
+}
+#progressbar li {
+  margin: 20px 10px 10px;
+  /* color: whitesmoke; */
+}
+
+#active1 {
+  color: red;
+  font-weight: 600;
+  font-size: large;
+}
+
+.error {
+  outline: 2px solid red;
+  border: 0;
+}
+small {
+  color: red;
+  font-size: 20px;
+  margin: 5px;
+}
+form {
+  background-image: url("/images/pic-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article {
+  display: none;
+  margin: 3% 0;
+  width: 50%;
+  height: 80vh;
+  padding: 20px;
+  box-shadow: 3px 3px 25px 1px gray;
+  overflow-y: auto;
+  color: whitesmoke;
+  border-radius: 20px;
+}
+
+.form-1 {
+  display: block;
+  margin: 3% 0;
+  width: 50%;
+  padding: 20px;
+  box-shadow: 3px 3px 25px 1px gray;
+  overflow-y: auto;
+}
+
+article h2 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+fieldset {
+  border: 0;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.gender {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: bold;
+}
+.gender p {
+  width: 30%;
+}
+
+.gender > label {
+  margin: 0;
+  width: 50px;
+  font-weight: 200;
+}
+.gender > input {
+  width: 5%;
+}
+.gender > div {
+  display: flex;
+  width: 40%;
+}
+
+label {
+  font-size: medium;
+  font-weight: bold;
+  width: 30%;
+
+  /* display: block; */
+}
+input {
+  width: 70%;
+  padding: 0.5rem;
+  margin: 1px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-next,
+.btn-previous,
+.btn-submit {
+  padding: 5px 10px;
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 600px) {
+  fieldset {
+    flex-direction: column;
+  }
+  input {
+    width: 80%;
+  }
+  label {
+    width: 80%;
+  }
+  .gender label {
+    font-weight: 100;
+  }
+  .gender > div {
+    display: block;
+  }
+  .gender p {
+    width: 80%;
+  }
+}
