@@ -4,6 +4,16 @@
   padding: 0;
 }
 
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+input[type="text"],
+select:focus {
+  font-size: 16px;
+}
+
 #progressbar {
   margin: 0;
   padding: 0;
