@@ -4,6 +4,7 @@ var count = 0;
 function ndata(event) {
   event.preventDefault();
   var input_field = Array.from(document.querySelectorAll("input"));
+  var form = document.querySelectorAll("form");
   var inputData = [];
 
   for (var i = input_field.length; i > count; i--) {
@@ -16,8 +17,8 @@ function ndata(event) {
 
   if (count != 0) alert("all fields required");
   if (count == 0) {
-    event.preventDefault();
-    alert("all fields entered");
+    // event.preventDefault();
+    // alert("all fields entered");
     input_field.forEach((input) => {
       if (input.type === "button" || input.type === "submit") return;
       const { name, value } = input;
@@ -26,8 +27,9 @@ function ndata(event) {
     });
     // console.log(inputData);
     localStorage.setItem("inputData", JSON.stringify({ ...inputData }));
-    return true;
+    location.reload();
   }
+  return true;
 }
 
 // Function that executes on click of first next button.
